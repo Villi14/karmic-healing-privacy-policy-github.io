@@ -3,67 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Karmic Healing</title>
+    <meta name="description" content="Privacy Policy for Karmic Healing, an offline iOS and watchOS app.">
+    <title>Privacy Policy · Karmic Healing</title>
     <style>
+        :root {
+            color-scheme: light dark;
+            --background: #fefeff;
+            --surface: rgba(255, 255, 255, 0.92);
+            --surface-muted: #f5e9e5;
+            --text: #2f2f2d;
+            --text-secondary: #6b6b69;
+            --accent: #8d95ee;
+            --accent-warm: #f26e77;
+            --border: rgba(141, 149, 238, 0.22);
+            --shadow: rgba(47, 47, 45, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
+            min-height: 100vh;
+            margin: 0;
+            padding: 32px 20px;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 10% 0%, rgba(242, 110, 119, 0.18), transparent 32%),
+                radial-gradient(circle at 90% 8%, rgba(141, 149, 238, 0.2), transparent 34%),
+                var(--background);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.7;
+        }
+
+        .shell {
+            width: min(100%, 760px);
             margin: 0 auto;
-            padding: 20px;
-            color: #333;
-            background-color: #f8f9fa;
+            padding: 44px clamp(24px, 6vw, 64px);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            box-shadow: 0 18px 60px var(--shadow);
+            backdrop-filter: blur(12px);
         }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+        .hero {
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border);
         }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
+
+        .eyebrow {
+            margin: 0 0 8px;
+            color: var(--accent-warm);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
         }
+
+        h1,
         h2 {
-            color: #34495e;
-            margin-top: 30px;
+            line-height: 1.2;
         }
-        .last-updated {
-            color: #7f8c8d;
-            font-style: italic;
-            margin-bottom: 30px;
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 5vw, 3rem);
+            letter-spacing: -0.04em;
         }
+
+        h2 {
+            margin: 32px 0 10px;
+            color: var(--text);
+            font-size: 1.22rem;
+        }
+
+        p {
+            margin: 0 0 14px;
+        }
+
+        .lead {
+            max-width: 58ch;
+            margin-top: 16px;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .updated {
+            margin: 18px 0 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .note,
         .contact {
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
+            margin-top: 22px;
+            padding: 20px 22px;
+            background: var(--surface-muted);
+            border-radius: 18px;
+        }
+
+        .note p:last-child,
+        .contact p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: #5964d4;
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: var(--accent-warm);
+        }
+
+        footer {
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #1f2128;
+                --surface: rgba(43, 38, 42, 0.92);
+                --surface-muted: #392d2a;
+                --text: #ebeded;
+                --text-secondary: #afb1b1;
+                --border: rgba(141, 149, 238, 0.28);
+                --shadow: rgba(0, 0, 0, 0.28);
+            }
+
+            a {
+                color: #aeb4ff;
+            }
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 16px 12px;
+            }
+
+            .shell {
+                padding: 30px 22px;
+                border-radius: 22px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: January 2025</p>
+    <main class="shell">
+        <header class="hero">
+            <p class="eyebrow">Karmic Healing</p>
+            <h1>Privacy Policy</h1>
+            <p class="lead">A calm, offline-first practice for balancing energy, keeping requests, and setting reminders on iPhone, iPad, and Apple Watch.</p>
+            <p class="updated">Last updated: <time datetime="2026-08-06">August 6, 2026</time></p>
+        </header>
 
-        <h2>Introduction</h2>
-        <p>Karmic Healing respects your privacy. This app is designed to work entirely offline and does not collect, store, or transmit any personal information to external servers.</p>
+        <section>
+            <h2>Introduction</h2>
+            <p>Karmic Healing works on iPhone, iPad, and Apple Watch and is designed to work offline. We do not operate servers that collect, store, or process your personal information.</p>
+        </section>
 
-        <h2>Data Collection</h2>
-        <p>This app does not collect any personal data. All your reminders, requests, and notes are stored locally on your device. We do not track your usage, collect analytics, or share any information with third parties.</p>
+        <section>
+            <h2>Data Collection</h2>
+            <p>The app does not require an account and does not send your reminders, requests, notes, or app activity to us. Information you enter is kept on your device for the app to function.</p>
+            <p>We do not use analytics, advertising identifiers, or usage-tracking services.</p>
+        </section>
 
-        <h2>Data Storage</h2>
-        <p>All data is stored locally on your device using iOS's built-in database system. Your data never leaves your device and is not backed up to any cloud services unless you explicitly choose to do so through your device's backup settings.</p>
+        <section>
+            <h2>Local Storage and Backups</h2>
+            <p>Your reminders, requests, notes, and preferences are stored locally in the app’s storage on your Apple device. The app does not provide cloud sync.</p>
+            <p>Depending on your iOS backup settings, app data may be included in a device backup. Any backup or restore service is governed by the policies and settings of Apple or the service you choose.</p>
+        </section>
 
-        <h2>Third Parties</h2>
-        <p>This app does not integrate with any third-party analytics, advertising, or data collection services. We do not use cookies, tracking pixels, or any other tracking technologies.</p>
+        <section>
+            <h2>Local Notifications</h2>
+            <p>If you grant permission, Karmic Healing schedules local notifications for reminders. Notification titles, text, and identifiers are used by the operating system to display and open those reminders; they are not sent to our servers. You can change notification access at any time in your device settings.</p>
+        </section>
 
-        <h2>Contact</h2>
-        <div class="contact">
-            <p>If you have any questions about this Privacy Policy, please contact us through the App Store review system or by email.</p>
-            <p><strong>Email:</strong> karmic.healing14@gmail.com</p>
-        </div>
-    </div>
+        <section>
+            <h2>Third-Party Services and Links</h2>
+            <p>The app contains no third-party analytics, advertising, tracking pixels, cookies, or data-collection SDKs. It does use open-source software libraries to provide app functionality.</p>
+            <p>If you choose to open an external website or contact us by email, that interaction is handled by the relevant website, App Store, or email provider under its own privacy policy. The app does not send your stored app data along with those actions.</p>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>If you contact us, we receive the information you choose to include so that we can respond to your request.</p>
+            <p><strong>Email:</strong> <a href="mailto:karmic.healing14@gmail.com">karmic.healing14@gmail.com</a></p>
+        </section>
+
+        <footer>
+            <p><a href="https://villi14.github.io/karmic-healing-support-github.io/">Karmic Healing Support</a></p>
+        </footer>
+    </main>
 </body>
 </html>
