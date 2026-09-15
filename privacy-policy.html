@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for Karmic Healing, an offline iOS and watchOS app.">
+    <meta name="description" content="Privacy Policy for Karmic Healing, an offline app for iOS, iPadOS, watchOS, and Android.">
     <title>Privacy Policy · Karmic Healing</title>
     <style>
         :root {
@@ -32,7 +32,7 @@
                 radial-gradient(circle at 10% 0%, rgba(242, 110, 119, 0.18), transparent 32%),
                 radial-gradient(circle at 90% 8%, rgba(141, 149, 238, 0.2), transparent 34%),
                 var(--background);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif;
             line-height: 1.7;
         }
 
@@ -52,13 +52,47 @@
             border-bottom: 1px solid var(--border);
         }
 
+        .topbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
         .eyebrow {
-            margin: 0 0 8px;
+            margin: 0;
             color: var(--accent-warm);
             font-size: 0.78rem;
             font-weight: 700;
             letter-spacing: 0.16em;
             text-transform: uppercase;
+        }
+
+        .language {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .language select {
+            max-width: 100%;
+            padding: 6px 30px 6px 12px;
+            color: var(--text);
+            background-color: var(--surface-muted);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font: inherit;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .language select:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
         }
 
         h1,
@@ -156,49 +190,474 @@
 <body>
     <main class="shell">
         <header class="hero">
-            <p class="eyebrow">Karmic Healing</p>
-            <h1>Privacy Policy</h1>
-            <p class="lead">A calm, offline-first practice for balancing energy, keeping requests, and setting reminders on iPhone, iPad, and Apple Watch.</p>
-            <p class="updated">Last updated: <time datetime="2026-08-06">August 6, 2026</time></p>
+            <div class="topbar">
+                <p class="eyebrow">Karmic Healing</p>
+                <label class="language">
+                    <span data-i18n="language">Language</span>
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="it">Italiano</option>
+                        <option value="ja">日本語</option>
+                        <option value="ko">한국어</option>
+                        <option value="pl">Polski</option>
+                        <option value="pt">Português</option>
+                        <option value="ru">Русский</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="uk">Українська</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </label>
+            </div>
+            <h1 data-i18n="title">Privacy Policy</h1>
+            <p class="lead" data-i18n="lead">A calm, offline-first practice for balancing energy, keeping requests, and setting reminders on iPhone, iPad, Apple Watch, and Android devices.</p>
+            <p class="updated"><span data-i18n="updated">Last updated:</span> <time id="updated-date" datetime="2026-09-15">September 15, 2026</time></p>
         </header>
 
         <section>
-            <h2>Introduction</h2>
-            <p>Karmic Healing works on iPhone, iPad, and Apple Watch and is designed to work offline. We do not operate servers that collect, store, or process your personal information.</p>
+            <h2 data-i18n="introTitle">Introduction</h2>
+            <p data-i18n="intro">Karmic Healing is available for iPhone, iPad, and Apple Watch on the App Store, and for Android phones and tablets on Google Play. On every platform it is designed to work offline. We do not operate servers that collect, store, or process your personal information.</p>
         </section>
 
         <section>
-            <h2>Data Collection</h2>
-            <p>The app does not require an account and does not send your reminders, requests, notes, or app activity to us. Information you enter is kept on your device for the app to function.</p>
-            <p>We do not use analytics, advertising identifiers, or usage-tracking services.</p>
+            <h2 data-i18n="dataTitle">Data Collection</h2>
+            <p data-i18n="data1">The app does not require an account and does not send your reminders, requests, notes, or app activity to us. Information you enter is kept on your device for the app to function.</p>
+            <p data-i18n="data2">We do not use analytics, advertising identifiers, or usage-tracking services.</p>
         </section>
 
         <section>
-            <h2>Local Storage and Backups</h2>
-            <p>Your reminders, requests, notes, and preferences are stored locally in the app’s storage on your Apple device. The app does not provide cloud sync.</p>
-            <p>Depending on your iOS backup settings, app data may be included in a device backup. Any backup or restore service is governed by the policies and settings of Apple or the service you choose.</p>
+            <h2 data-i18n="storageTitle">Local Storage and Backups</h2>
+            <p data-i18n="storage1">Your reminders, requests, notes, and preferences are stored locally in the app’s storage on your device. The app does not provide cloud sync.</p>
+            <p data-i18n="storage2">Depending on your device settings, app data may be included in a system backup — for example, iCloud or Finder backups on Apple devices, or Google backup on Android. Any backup or restore service is governed by the policies and settings of Apple, Google, or the service you choose.</p>
         </section>
 
         <section>
-            <h2>Local Notifications</h2>
-            <p>If you grant permission, Karmic Healing schedules local notifications for reminders. Notification titles, text, and identifiers are used by the operating system to display and open those reminders; they are not sent to our servers. You can change notification access at any time in your device settings.</p>
+            <h2 data-i18n="notificationsTitle">Local Notifications</h2>
+            <p data-i18n="notifications">If you grant permission, Karmic Healing schedules local notifications for reminders. Notification titles, text, and identifiers are used by the operating system to display and open those reminders; they are not sent to our servers. On Android, the app also uses permission to restore scheduled reminders after the device restarts. You can change notification access at any time in your device settings.</p>
         </section>
 
         <section>
-            <h2>Third-Party Services and Links</h2>
-            <p>The app contains no third-party analytics, advertising, tracking pixels, cookies, or data-collection SDKs. It does use open-source software libraries to provide app functionality.</p>
-            <p>If you choose to open an external website or contact us by email, that interaction is handled by the relevant website, App Store, or email provider under its own privacy policy. The app does not send your stored app data along with those actions.</p>
+            <h2 data-i18n="lockTitle">App Lock and Biometrics</h2>
+            <p data-i18n="lock">If you turn on the app lock, the app asks your device to confirm your identity using Face ID, Touch ID, fingerprint, face unlock, or your device passcode. This check is performed entirely by the operating system: the app never receives, stores, or transmits your biometric data.</p>
+        </section>
+
+        <section>
+            <h2 data-i18n="thirdPartyTitle">Third-Party Services and Links</h2>
+            <p data-i18n="thirdParty1">The app contains no third-party analytics, advertising, tracking pixels, cookies, or data-collection SDKs. It does use open-source software libraries to provide app functionality.</p>
+            <p data-i18n="thirdParty2">If you choose to open an external website or contact us by email, that interaction is handled by the relevant website, App Store, Google Play, or email provider under its own privacy policy. The app does not send your stored app data along with those actions.</p>
         </section>
 
         <section class="contact">
-            <h2>Contact Us</h2>
-            <p>If you contact us, we receive the information you choose to include so that we can respond to your request.</p>
-            <p><strong>Email:</strong> <a href="mailto:karmic.healing14@gmail.com">karmic.healing14@gmail.com</a></p>
+            <h2 data-i18n="contactTitle">Contact Us</h2>
+            <p data-i18n="contact">If you contact us, we receive the information you choose to include so that we can respond to your request.</p>
+            <p><strong data-i18n="email">Email:</strong> <a href="mailto:karmic.healing14@gmail.com">karmic.healing14@gmail.com</a></p>
         </section>
 
         <footer>
-            <p><a href="https://villi14.github.io/karmic-healing-support-github.io/">Karmic Healing Support</a></p>
+            <p><a href="https://villi14.github.io/karmic-healing-support-github.io/" data-i18n="support">Karmic Healing Support</a></p>
         </footer>
     </main>
+
+    <script>
+        // The English text lives in the markup above, so the page reads the same
+        // without JavaScript. Every other language replaces it by key.
+        // The apps open this page with ?lang=<their locale>; anything unknown
+        // or missing falls back to English.
+        const translations = {
+            en: {},
+            bn: {
+                language: "ভাষা",
+                title: "গোপনীয়তা নীতি",
+                lead: "শক্তির ভারসাম্য, প্রার্থনা রাখা ও অনুস্মারক নির্ধারণের জন্য একটি শান্ত, অফলাইন-প্রথম অনুশীলন — iPhone, iPad, Apple Watch ও Android ডিভাইসে।",
+                updated: "সর্বশেষ হালনাগাদ:",
+                introTitle: "ভূমিকা",
+                intro: "Karmic Healing App Store-এ iPhone, iPad ও Apple Watch-এর জন্য এবং Google Play-তে Android ফোন ও ট্যাবলেটের জন্য পাওয়া যায়। প্রতিটি প্ল্যাটফর্মেই এটি অফলাইনে কাজ করার জন্য তৈরি। আপনার ব্যক্তিগত তথ্য সংগ্রহ, সংরক্ষণ বা প্রক্রিয়াকরণ করে এমন কোনো সার্ভার আমরা চালাই না।",
+                dataTitle: "তথ্য সংগ্রহ",
+                data1: "অ্যাপটির জন্য কোনো অ্যাকাউন্ট লাগে না এবং এটি আপনার অনুস্মারক, প্রার্থনা, নোট বা অ্যাপের কার্যকলাপ আমাদের কাছে পাঠায় না। আপনার দেওয়া তথ্য অ্যাপ চালানোর জন্য আপনার ডিভাইসেই থাকে।",
+                data2: "আমরা অ্যানালিটিক্স, বিজ্ঞাপন শনাক্তকারী বা ব্যবহার-ট্র্যাকিং পরিষেবা ব্যবহার করি না।",
+                storageTitle: "স্থানীয় সংরক্ষণ ও ব্যাকআপ",
+                storage1: "আপনার অনুস্মারক, প্রার্থনা, নোট ও পছন্দসমূহ আপনার ডিভাইসে অ্যাপের নিজস্ব সঞ্চয়ে স্থানীয়ভাবে রাখা হয়। অ্যাপটি ক্লাউড সিঙ্ক দেয় না।",
+                storage2: "আপনার ডিভাইসের সেটিংস অনুযায়ী অ্যাপের তথ্য সিস্টেম ব্যাকআপে অন্তর্ভুক্ত হতে পারে — যেমন Apple ডিভাইসে iCloud বা Finder ব্যাকআপ, অথবা Android-এ Google ব্যাকআপ। যেকোনো ব্যাকআপ বা পুনরুদ্ধার পরিষেবা Apple, Google অথবা আপনার বেছে নেওয়া পরিষেবার নীতি ও সেটিংস অনুযায়ী চলে।",
+                notificationsTitle: "স্থানীয় বিজ্ঞপ্তি",
+                notifications: "আপনি অনুমতি দিলে Karmic Healing অনুস্মারকের জন্য স্থানীয় বিজ্ঞপ্তি নির্ধারণ করে। বিজ্ঞপ্তির শিরোনাম, লেখা ও শনাক্তকারী অপারেটিং সিস্টেম সেই অনুস্মারকগুলি দেখাতে ও খুলতে ব্যবহার করে; এগুলি আমাদের সার্ভারে পাঠানো হয় না। Android-এ ডিভাইস আবার চালু হওয়ার পর নির্ধারিত অনুস্মারকগুলি ফিরিয়ে আনতে অ্যাপটি একটি অনুমতিও ব্যবহার করে। বিজ্ঞপ্তির অনুমতি আপনি যেকোনো সময় ডিভাইসের সেটিংসে বদলাতে পারেন।",
+                lockTitle: "অ্যাপ লক ও বায়োমেট্রিক্স",
+                lock: "আপনি অ্যাপ লক চালু করলে, অ্যাপটি Face ID, Touch ID, আঙুলের ছাপ, ফেস আনলক বা ডিভাইসের পাসকোড দিয়ে আপনার পরিচয় নিশ্চিত করতে ডিভাইসকে অনুরোধ করে। এই যাচাই সম্পূর্ণভাবে অপারেটিং সিস্টেম করে: অ্যাপটি কখনো আপনার বায়োমেট্রিক তথ্য পায় না, সংরক্ষণ করে না বা পাঠায় না।",
+                thirdPartyTitle: "তৃতীয় পক্ষের পরিষেবা ও লিংক",
+                thirdParty1: "অ্যাপে তৃতীয় পক্ষের অ্যানালিটিক্স, বিজ্ঞাপন, ট্র্যাকিং পিক্সেল, কুকি বা তথ্য সংগ্রহকারী SDK নেই। তবে অ্যাপের সুবিধাগুলি দিতে এটি ওপেন-সোর্স সফটওয়্যার লাইব্রেরি ব্যবহার করে।",
+                thirdParty2: "আপনি কোনো বাইরের ওয়েবসাইট খুললে বা ইমেলে যোগাযোগ করলে, সেই আদান-প্রদান সংশ্লিষ্ট ওয়েবসাইট, App Store, Google Play বা ইমেল সরবরাহকারী তাদের নিজস্ব গোপনীয়তা নীতি অনুযায়ী পরিচালনা করে। অ্যাপ সেসব কাজের সঙ্গে আপনার সংরক্ষিত তথ্য পাঠায় না।",
+                contactTitle: "যোগাযোগ করুন",
+                contact: "আপনি আমাদের সঙ্গে যোগাযোগ করলে, আপনার বার্তার উত্তর দিতে পারার জন্য কেবল সেই তথ্যই আমরা পাই যা আপনি নিজে জানাতে চান।",
+                email: "ইমেল:",
+                support: "Karmic Healing সহায়তা"
+            },
+            de: {
+                language: "Sprache",
+                title: "Datenschutzerklärung",
+                lead: "Eine ruhige Praxis, die ohne Internet funktioniert: Energie ausgleichen, Bitten festhalten und Erinnerungen einrichten – auf iPhone, iPad, Apple Watch und Android-Geräten.",
+                updated: "Zuletzt aktualisiert:",
+                introTitle: "Einführung",
+                intro: "Karmic Healing ist für iPhone, iPad und Apple Watch im App Store sowie für Android-Smartphones und -Tablets bei Google Play erhältlich. Auf jeder Plattform ist die App für die Nutzung ohne Internetverbindung ausgelegt. Wir betreiben keine Server, die deine personenbezogenen Daten erheben, speichern oder verarbeiten.",
+                dataTitle: "Datenerhebung",
+                data1: "Die App benötigt kein Konto und sendet uns weder deine Erinnerungen, Bitten und Notizen noch deine Aktivität in der App. Die von dir eingegebenen Informationen bleiben für den Betrieb der App auf deinem Gerät.",
+                data2: "Wir verwenden keine Analysedienste, Werbe-IDs oder Nutzungs-Tracking.",
+                storageTitle: "Lokale Speicherung und Backups",
+                storage1: "Deine Erinnerungen, Bitten, Notizen und Einstellungen werden lokal im Speicher der App auf deinem Gerät abgelegt. Die App bietet keine Cloud-Synchronisierung.",
+                storage2: "Je nach den Einstellungen deines Geräts können App-Daten in einem Systembackup enthalten sein – zum Beispiel in iCloud- oder Finder-Backups auf Apple-Geräten oder im Google-Backup auf Android. Für jeden Backup- oder Wiederherstellungsdienst gelten die Richtlinien und Einstellungen von Apple, Google oder des von dir gewählten Dienstes.",
+                notificationsTitle: "Lokale Mitteilungen",
+                notifications: "Wenn du die Berechtigung erteilst, plant Karmic Healing lokale Mitteilungen für Erinnerungen. Titel, Text und Kennungen der Mitteilungen nutzt das Betriebssystem, um diese Erinnerungen anzuzeigen und zu öffnen; an unsere Server werden sie nicht gesendet. Auf Android nutzt die App außerdem eine Berechtigung, um geplante Erinnerungen nach einem Neustart des Geräts wiederherzustellen. Den Zugriff auf Mitteilungen kannst du jederzeit in den Einstellungen deines Geräts ändern.",
+                lockTitle: "App-Sperre und Biometrie",
+                lock: "Wenn du die App-Sperre aktivierst, bittet die App dein Gerät, deine Identität per Face ID, Touch ID, Fingerabdruck, Gesichtsentsperrung oder Gerätecode zu bestätigen. Diese Prüfung übernimmt vollständig das Betriebssystem: Die App erhält, speichert oder übermittelt niemals deine biometrischen Daten.",
+                thirdPartyTitle: "Dienste von Drittanbietern und Links",
+                thirdParty1: "Die App enthält keine Analysedienste Dritter, keine Werbung, keine Tracking-Pixel, keine Cookies und keine SDKs zur Datenerhebung. Sie verwendet jedoch Open-Source-Softwarebibliotheken, um ihre Funktionen bereitzustellen.",
+                thirdParty2: "Wenn du eine externe Website öffnest oder uns eine E-Mail schreibst, wird diese Interaktion von der jeweiligen Website, vom App Store, von Google Play oder vom E-Mail-Anbieter nach deren eigener Datenschutzerklärung abgewickelt. Die App übermittelt dabei keine deiner gespeicherten App-Daten.",
+                contactTitle: "Kontakt",
+                contact: "Wenn du uns schreibst, erhalten wir die Informationen, die du selbst mitteilst, damit wir auf dein Anliegen antworten können.",
+                email: "E-Mail:",
+                support: "Karmic Healing Support"
+            },
+            es: {
+                language: "Idioma",
+                title: "Política de privacidad",
+                lead: "Una práctica serena que funciona sin conexión para equilibrar la energía, guardar peticiones y programar recordatorios en iPhone, iPad, Apple Watch y dispositivos Android.",
+                updated: "Última actualización:",
+                introTitle: "Introducción",
+                intro: "Karmic Healing está disponible para iPhone, iPad y Apple Watch en el App Store, y para teléfonos y tabletas Android en Google Play. En todas las plataformas está diseñada para funcionar sin conexión. No operamos servidores que recopilen, almacenen o procesen tu información personal.",
+                dataTitle: "Recopilación de datos",
+                data1: "La app no requiere cuenta y no nos envía tus recordatorios, peticiones, notas ni tu actividad en la app. La información que introduces se guarda en tu dispositivo para que la app funcione.",
+                data2: "No usamos analíticas, identificadores publicitarios ni servicios de seguimiento de uso.",
+                storageTitle: "Almacenamiento local y copias de seguridad",
+                storage1: "Tus recordatorios, peticiones, notas y preferencias se guardan localmente en el almacenamiento de la app, en tu dispositivo. La app no ofrece sincronización en la nube.",
+                storage2: "Según los ajustes de tu dispositivo, los datos de la app pueden incluirse en una copia de seguridad del sistema; por ejemplo, las copias de iCloud o Finder en dispositivos Apple, o la copia de Google en Android. Cualquier servicio de copia o restauración se rige por las políticas y los ajustes de Apple, Google o del servicio que elijas.",
+                notificationsTitle: "Notificaciones locales",
+                notifications: "Si concedes el permiso, Karmic Healing programa notificaciones locales para los recordatorios. El sistema operativo usa los títulos, los textos y los identificadores de las notificaciones para mostrarlas y abrir esos recordatorios; no se envían a nuestros servidores. En Android, la app también usa un permiso para restaurar los recordatorios programados después de reiniciar el dispositivo. Puedes cambiar el acceso a las notificaciones en cualquier momento en los ajustes de tu dispositivo.",
+                lockTitle: "Bloqueo de la app y biometría",
+                lock: "Si activas el bloqueo de la app, esta pide a tu dispositivo que confirme tu identidad con Face ID, Touch ID, huella dactilar, desbloqueo facial o el código del dispositivo. Esta comprobación la realiza por completo el sistema operativo: la app nunca recibe, guarda ni transmite tus datos biométricos.",
+                thirdPartyTitle: "Servicios de terceros y enlaces",
+                thirdParty1: "La app no contiene analíticas de terceros, publicidad, píxeles de seguimiento, cookies ni SDK de recopilación de datos. Sí utiliza bibliotecas de software de código abierto para ofrecer sus funciones.",
+                thirdParty2: "Si decides abrir un sitio web externo o escribirnos por correo, esa interacción la gestiona el sitio web, el App Store, Google Play o el proveedor de correo correspondiente según su propia política de privacidad. La app no envía tus datos guardados junto con esas acciones.",
+                contactTitle: "Contacto",
+                contact: "Si nos escribes, recibimos la información que decidas incluir para poder responder a tu solicitud.",
+                email: "Correo electrónico:",
+                support: "Soporte de Karmic Healing"
+            },
+            fr: {
+                language: "Langue",
+                title: "Politique de confidentialité",
+                lead: "Une pratique apaisante, conçue pour fonctionner hors ligne : équilibrer l'énergie, garder ses demandes et programmer des rappels sur iPhone, iPad, Apple Watch et appareils Android.",
+                updated: "Dernière mise à jour :",
+                introTitle: "Introduction",
+                intro: "Karmic Healing est disponible pour iPhone, iPad et Apple Watch sur l'App Store, et pour les téléphones et tablettes Android sur Google Play. Sur chaque plateforme, l'app est conçue pour fonctionner hors ligne. Nous n'exploitons aucun serveur qui collecte, stocke ou traite vos informations personnelles.",
+                dataTitle: "Collecte de données",
+                data1: "L'app ne nécessite pas de compte et ne nous transmet ni vos rappels, ni vos demandes, ni vos notes, ni votre activité dans l'app. Les informations que vous saisissez restent sur votre appareil pour le fonctionnement de l'app.",
+                data2: "Nous n'utilisons ni outils d'analyse, ni identifiants publicitaires, ni services de suivi d'utilisation.",
+                storageTitle: "Stockage local et sauvegardes",
+                storage1: "Vos rappels, demandes, notes et préférences sont stockés localement dans l'espace de stockage de l'app, sur votre appareil. L'app ne propose pas de synchronisation cloud.",
+                storage2: "Selon les réglages de votre appareil, les données de l'app peuvent être incluses dans une sauvegarde système — par exemple les sauvegardes iCloud ou Finder sur les appareils Apple, ou la sauvegarde Google sur Android. Tout service de sauvegarde ou de restauration est régi par les politiques et les réglages d'Apple, de Google ou du service que vous choisissez.",
+                notificationsTitle: "Notifications locales",
+                notifications: "Si vous accordez l'autorisation, Karmic Healing programme des notifications locales pour les rappels. Les titres, les textes et les identifiants des notifications sont utilisés par le système d'exploitation pour afficher et ouvrir ces rappels ; ils ne sont pas envoyés à nos serveurs. Sur Android, l'app utilise également une autorisation pour rétablir les rappels programmés après le redémarrage de l'appareil. Vous pouvez modifier l'accès aux notifications à tout moment dans les réglages de votre appareil.",
+                lockTitle: "Verrouillage de l'app et biométrie",
+                lock: "Si vous activez le verrouillage de l'app, celle-ci demande à votre appareil de confirmer votre identité avec Face ID, Touch ID, l'empreinte digitale, le déverrouillage par reconnaissance faciale ou le code de l'appareil. Cette vérification est entièrement effectuée par le système d'exploitation : l'app ne reçoit, ne stocke et ne transmet jamais vos données biométriques.",
+                thirdPartyTitle: "Services tiers et liens",
+                thirdParty1: "L'app ne contient aucun outil d'analyse tiers, aucune publicité, aucun pixel de suivi, aucun cookie ni SDK de collecte de données. Elle utilise en revanche des bibliothèques logicielles open source pour assurer ses fonctionnalités.",
+                thirdParty2: "Si vous choisissez d'ouvrir un site web externe ou de nous écrire par e-mail, cette interaction est gérée par le site, l'App Store, Google Play ou le fournisseur de messagerie concerné, selon sa propre politique de confidentialité. L'app ne transmet pas vos données enregistrées lors de ces actions.",
+                contactTitle: "Nous contacter",
+                contact: "Si vous nous écrivez, nous recevons les informations que vous choisissez d'inclure, afin de pouvoir répondre à votre demande.",
+                email: "E-mail :",
+                support: "Assistance Karmic Healing"
+            },
+            hi: {
+                language: "भाषा",
+                title: "गोपनीयता नीति",
+                lead: "ऊर्जा संतुलन, प्रार्थनाएँ सहेजने और अनुस्मारक सेट करने के लिए एक शांत, ऑफ़लाइन-प्रथम अभ्यास — iPhone, iPad, Apple Watch और Android डिवाइस पर।",
+                updated: "अंतिम अद्यतन:",
+                introTitle: "परिचय",
+                intro: "Karmic Healing App Store पर iPhone, iPad और Apple Watch के लिए, और Google Play पर Android फ़ोन और टैबलेट के लिए उपलब्ध है। हर प्लैटफ़ॉर्म पर इसे ऑफ़लाइन काम करने के लिए बनाया गया है। हम ऐसे कोई सर्वर नहीं चलाते जो आपकी व्यक्तिगत जानकारी एकत्र, संग्रहीत या संसाधित करते हों।",
+                dataTitle: "डेटा संग्रह",
+                data1: "ऐप के लिए किसी खाते की आवश्यकता नहीं है और यह आपके अनुस्मारक, प्रार्थनाएँ, टिप्पणियाँ या ऐप की गतिविधि हमें नहीं भेजता। आपकी दर्ज की गई जानकारी ऐप के संचालन के लिए आपके डिवाइस पर ही रहती है।",
+                data2: "हम एनालिटिक्स, विज्ञापन पहचानकर्ता या उपयोग-ट्रैकिंग सेवाओं का उपयोग नहीं करते।",
+                storageTitle: "स्थानीय भंडारण और बैकअप",
+                storage1: "आपके अनुस्मारक, प्रार्थनाएँ, टिप्पणियाँ और वरीयताएँ आपके डिवाइस पर ऐप के भंडारण में स्थानीय रूप से सहेजी जाती हैं। ऐप क्लाउड सिंक नहीं देता।",
+                storage2: "आपके डिवाइस की सेटिंग के अनुसार ऐप का डेटा सिस्टम बैकअप में शामिल हो सकता है — जैसे Apple डिवाइस पर iCloud या Finder बैकअप, या Android पर Google बैकअप। कोई भी बैकअप या पुनर्स्थापन सेवा Apple, Google या आपके चुने हुए सेवा प्रदाता की नीतियों और सेटिंग से संचालित होती है।",
+                notificationsTitle: "स्थानीय सूचनाएँ",
+                notifications: "अनुमति देने पर Karmic Healing अनुस्मारकों के लिए स्थानीय सूचनाएँ निर्धारित करता है। सूचनाओं के शीर्षक, पाठ और पहचानकर्ता ऑपरेटिंग सिस्टम उन अनुस्मारकों को दिखाने और खोलने के लिए उपयोग करता है; ये हमारे सर्वर पर नहीं भेजे जाते। Android पर, डिवाइस के दोबारा चालू होने के बाद निर्धारित अनुस्मारकों को फिर से लगाने के लिए ऐप एक अनुमति का भी उपयोग करता है। सूचनाओं की अनुमति आप कभी भी अपने डिवाइस की सेटिंग में बदल सकते हैं।",
+                lockTitle: "ऐप लॉक और बायोमेट्रिक्स",
+                lock: "यदि आप ऐप लॉक चालू करते हैं, तो ऐप आपके डिवाइस से Face ID, Touch ID, फ़िंगरप्रिंट, फ़ेस अनलॉक या डिवाइस पासकोड के ज़रिए आपकी पहचान की पुष्टि करने को कहता है। यह जाँच पूरी तरह ऑपरेटिंग सिस्टम करता है: ऐप आपका बायोमेट्रिक डेटा कभी प्राप्त, संग्रहीत या प्रेषित नहीं करता।",
+                thirdPartyTitle: "तृतीय-पक्ष सेवाएँ और लिंक",
+                thirdParty1: "ऐप में तृतीय-पक्ष एनालिटिक्स, विज्ञापन, ट्रैकिंग पिक्सल, कुकीज़ या डेटा एकत्र करने वाले SDK नहीं हैं। हाँ, ऐप की सुविधाएँ देने के लिए यह ओपन-सोर्स सॉफ़्टवेयर लाइब्रेरियों का उपयोग करता है।",
+                thirdParty2: "यदि आप कोई बाहरी वेबसाइट खोलते हैं या ईमेल से हमसे संपर्क करते हैं, तो वह संवाद संबंधित वेबसाइट, App Store, Google Play या ईमेल प्रदाता अपनी गोपनीयता नीति के अनुसार संभालता है। ऐप उन क्रियाओं के साथ आपका सहेजा हुआ डेटा नहीं भेजता।",
+                contactTitle: "हमसे संपर्क करें",
+                contact: "यदि आप हमसे संपर्क करते हैं, तो हमें केवल वही जानकारी मिलती है जो आप स्वयं भेजना चुनते हैं, ताकि हम आपके संदेश का उत्तर दे सकें।",
+                email: "ईमेल:",
+                support: "Karmic Healing सहायता"
+            },
+            it: {
+                language: "Lingua",
+                title: "Informativa sulla privacy",
+                lead: "Una pratica serena pensata per funzionare offline: riequilibrare l'energia, custodire le richieste e impostare promemoria su iPhone, iPad, Apple Watch e dispositivi Android.",
+                updated: "Ultimo aggiornamento:",
+                introTitle: "Introduzione",
+                intro: "Karmic Healing è disponibile per iPhone, iPad e Apple Watch sull'App Store e per smartphone e tablet Android su Google Play. Su ogni piattaforma è progettata per funzionare offline. Non gestiamo server che raccolgono, conservano o elaborano i tuoi dati personali.",
+                dataTitle: "Raccolta dei dati",
+                data1: "L'app non richiede un account e non ci invia i tuoi promemoria, le tue richieste, le tue note né la tua attività nell'app. Le informazioni che inserisci restano sul tuo dispositivo per il funzionamento dell'app.",
+                data2: "Non usiamo strumenti di analisi, identificatori pubblicitari o servizi di tracciamento dell'utilizzo.",
+                storageTitle: "Archiviazione locale e backup",
+                storage1: "I tuoi promemoria, le richieste, le note e le preferenze sono salvati localmente nello spazio dell'app, sul tuo dispositivo. L'app non offre la sincronizzazione su cloud.",
+                storage2: "A seconda delle impostazioni del dispositivo, i dati dell'app possono essere inclusi in un backup di sistema, ad esempio i backup iCloud o Finder sui dispositivi Apple o il backup Google su Android. Qualsiasi servizio di backup o ripristino è regolato dalle politiche e dalle impostazioni di Apple, Google o del servizio che scegli.",
+                notificationsTitle: "Notifiche locali",
+                notifications: "Se concedi l'autorizzazione, Karmic Healing pianifica notifiche locali per i promemoria. Titoli, testi e identificatori delle notifiche vengono usati dal sistema operativo per mostrare e aprire quei promemoria; non vengono inviati ai nostri server. Su Android l'app usa anche un'autorizzazione per ripristinare i promemoria pianificati dopo il riavvio del dispositivo. Puoi modificare l'accesso alle notifiche in qualsiasi momento nelle impostazioni del dispositivo.",
+                lockTitle: "Blocco dell'app e biometria",
+                lock: "Se attivi il blocco dell'app, l'app chiede al dispositivo di confermare la tua identità con Face ID, Touch ID, impronta digitale, sblocco con il volto o il codice del dispositivo. Questa verifica è eseguita interamente dal sistema operativo: l'app non riceve, non conserva e non trasmette mai i tuoi dati biometrici.",
+                thirdPartyTitle: "Servizi di terze parti e link",
+                thirdParty1: "L'app non contiene strumenti di analisi di terze parti, pubblicità, pixel di tracciamento, cookie o SDK per la raccolta di dati. Utilizza però librerie software open source per fornire le proprie funzioni.",
+                thirdParty2: "Se scegli di aprire un sito web esterno o di scriverci via e-mail, quell'interazione è gestita dal sito, dall'App Store, da Google Play o dal provider di posta secondo la loro informativa sulla privacy. L'app non invia i tuoi dati salvati insieme a quelle azioni.",
+                contactTitle: "Contattaci",
+                contact: "Se ci scrivi, riceviamo le informazioni che scegli di includere, così da poter rispondere alla tua richiesta.",
+                email: "E-mail:",
+                support: "Supporto Karmic Healing"
+            },
+            ja: {
+                language: "言語",
+                title: "プライバシーポリシー",
+                lead: "エネルギーを整え、願いを記録し、リマインダーを設定するための、オフラインで使える穏やかなプラクティス。iPhone、iPad、Apple Watch、Android デバイスに対応しています。",
+                updated: "最終更新日：",
+                introTitle: "はじめに",
+                intro: "Karmic Healing は、iPhone、iPad、Apple Watch 向けに App Store で、Android のスマートフォンとタブレット向けに Google Play で提供されています。どのプラットフォームでもオフラインで使えるように設計されています。当方は、お客様の個人情報を収集・保存・処理するサーバーを運用していません。",
+                dataTitle: "データの収集",
+                data1: "本アプリはアカウントを必要とせず、リマインダー、願い、メモ、アプリ内の操作履歴を当方に送信することはありません。入力された情報は、アプリの動作のためにお使いのデバイス内に保存されます。",
+                data2: "解析ツール、広告識別子、利用状況の追跡サービスは使用していません。",
+                storageTitle: "ローカル保存とバックアップ",
+                storage1: "リマインダー、願い、メモ、各種設定は、お使いのデバイス上のアプリ領域にローカル保存されます。本アプリはクラウド同期を提供しません。",
+                storage2: "デバイスの設定によっては、アプリのデータがシステムのバックアップに含まれる場合があります。たとえば Apple デバイスでは iCloud や Finder のバックアップ、Android では Google のバックアップです。バックアップや復元のサービスは、Apple、Google、またはお客様が選んだサービスのポリシーと設定に従います。",
+                notificationsTitle: "ローカル通知",
+                notifications: "許可をいただいた場合、Karmic Healing はリマインダーのためのローカル通知を予約します。通知のタイトル、本文、識別子は、それらのリマインダーを表示して開くためにオペレーティングシステムが使用するもので、当方のサーバーには送信されません。Android では、デバイスの再起動後に予約済みのリマインダーを復元するための権限も使用します。通知の許可は、いつでもデバイスの設定から変更できます。",
+                lockTitle: "アプリロックと生体認証",
+                lock: "アプリロックをオンにすると、本アプリは Face ID、Touch ID、指紋認証、顔認証、またはデバイスのパスコードによる本人確認をデバイスに求めます。この確認はすべてオペレーティングシステムが行い、本アプリが生体情報を受け取ったり、保存したり、送信したりすることはありません。",
+                thirdPartyTitle: "第三者のサービスとリンク",
+                thirdParty1: "本アプリには、第三者の解析ツール、広告、トラッキングピクセル、Cookie、データ収集SDKは含まれていません。ただし、機能の提供のためにオープンソースのソフトウェアライブラリを使用しています。",
+                thirdParty2: "外部のウェブサイトを開いたり、メールで連絡したりする場合、そのやり取りは各ウェブサイト、App Store、Google Play、メールプロバイダが自らのプライバシーポリシーに基づいて扱います。その際、本アプリが保存済みのデータを併せて送信することはありません。",
+                contactTitle: "お問い合わせ",
+                contact: "お問い合わせいただいた場合、ご返信のために、お客様が記載を選んだ情報のみを受け取ります。",
+                email: "メール：",
+                support: "Karmic Healing サポート"
+            },
+            ko: {
+                language: "언어",
+                title: "개인정보 처리방침",
+                lead: "에너지 균형, 청원 기록, 미리 알림 설정을 위한 차분한 오프라인 중심 수행 앱 — iPhone, iPad, Apple Watch, Android 기기에서 사용할 수 있습니다.",
+                updated: "최종 업데이트:",
+                introTitle: "소개",
+                intro: "Karmic Healing은 App Store에서 iPhone, iPad, Apple Watch용으로, Google Play에서 Android 휴대전화 및 태블릿용으로 제공됩니다. 모든 플랫폼에서 오프라인 사용을 전제로 설계되었습니다. 저희는 사용자의 개인정보를 수집·저장·처리하는 서버를 운영하지 않습니다.",
+                dataTitle: "데이터 수집",
+                data1: "이 앱은 계정이 필요 없으며, 미리 알림·청원·메모·앱 사용 기록을 저희에게 보내지 않습니다. 입력한 정보는 앱 동작을 위해 기기에 보관됩니다.",
+                data2: "분석 도구, 광고 식별자, 사용 추적 서비스는 사용하지 않습니다.",
+                storageTitle: "로컬 저장 및 백업",
+                storage1: "미리 알림, 청원, 메모, 환경설정은 기기의 앱 저장 공간에 로컬로 저장됩니다. 이 앱은 클라우드 동기화를 제공하지 않습니다.",
+                storage2: "기기 설정에 따라 앱 데이터가 시스템 백업에 포함될 수 있습니다. 예를 들어 Apple 기기의 iCloud 또는 Finder 백업, Android의 Google 백업이 있습니다. 모든 백업 및 복원 서비스는 Apple, Google 또는 사용자가 선택한 서비스의 정책과 설정을 따릅니다.",
+                notificationsTitle: "로컬 알림",
+                notifications: "권한을 허용하시면 Karmic Healing은 미리 알림을 위한 로컬 알림을 예약합니다. 알림의 제목과 본문, 식별자는 해당 미리 알림을 표시하고 여는 데 운영체제가 사용하며, 저희 서버로 전송되지 않습니다. Android에서는 기기를 다시 시작한 후 예약된 미리 알림을 복원하기 위한 권한도 사용합니다. 알림 권한은 언제든지 기기 설정에서 변경할 수 있습니다.",
+                lockTitle: "앱 잠금 및 생체 인증",
+                lock: "앱 잠금을 켜면 앱은 Face ID, Touch ID, 지문, 얼굴 인식 잠금 해제 또는 기기 암호로 본인 확인을 하도록 기기에 요청합니다. 이 확인은 전적으로 운영체제가 수행하며, 앱은 사용자의 생체 정보를 받거나 저장하거나 전송하지 않습니다.",
+                thirdPartyTitle: "서드파티 서비스 및 링크",
+                thirdParty1: "이 앱에는 서드파티 분석 도구, 광고, 추적 픽셀, 쿠키, 데이터 수집 SDK가 포함되어 있지 않습니다. 다만 앱 기능 제공을 위해 오픈소스 소프트웨어 라이브러리를 사용합니다.",
+                thirdParty2: "외부 웹사이트를 열거나 이메일로 문의하기를 선택하시면, 해당 상호작용은 그 웹사이트, App Store, Google Play 또는 이메일 제공업체가 자체 개인정보 처리방침에 따라 처리합니다. 이때 앱이 저장된 데이터를 함께 전송하지는 않습니다.",
+                contactTitle: "문의하기",
+                contact: "문의를 보내시면, 답변을 드리기 위해 보내 주신 내용만을 전달받습니다.",
+                email: "이메일:",
+                support: "Karmic Healing 지원"
+            },
+            pl: {
+                language: "Język",
+                title: "Polityka prywatności",
+                lead: "Spokojna praktyka działająca offline: równoważenie energii, zapisywanie próśb i ustawianie przypomnień na iPhonie, iPadzie, Apple Watch i urządzeniach z Androidem.",
+                updated: "Ostatnia aktualizacja:",
+                introTitle: "Wprowadzenie",
+                intro: "Karmic Healing jest dostępna na iPhone'a, iPada i Apple Watch w App Store oraz na telefony i tablety z Androidem w Google Play. Na każdej platformie jest zaprojektowana do pracy offline. Nie prowadzimy serwerów, które zbierają, przechowują lub przetwarzają Twoje dane osobowe.",
+                dataTitle: "Zbieranie danych",
+                data1: "Aplikacja nie wymaga konta i nie przesyła nam Twoich przypomnień, próśb, notatek ani aktywności w aplikacji. Wprowadzone informacje pozostają na Twoim urządzeniu, aby aplikacja mogła działać.",
+                data2: "Nie używamy analityki, identyfikatorów reklamowych ani usług śledzenia użytkowania.",
+                storageTitle: "Przechowywanie lokalne i kopie zapasowe",
+                storage1: "Twoje przypomnienia, prośby, notatki i preferencje są przechowywane lokalnie w pamięci aplikacji na Twoim urządzeniu. Aplikacja nie oferuje synchronizacji w chmurze.",
+                storage2: "W zależności od ustawień urządzenia dane aplikacji mogą zostać objęte systemową kopią zapasową — na przykład kopią iCloud lub Finder na urządzeniach Apple albo kopią zapasową Google na Androidzie. Każda usługa kopii zapasowej lub przywracania podlega zasadom i ustawieniom Apple, Google lub wybranej przez Ciebie usługi.",
+                notificationsTitle: "Powiadomienia lokalne",
+                notifications: "Jeśli udzielisz zgody, Karmic Healing planuje lokalne powiadomienia dla przypomnień. Tytuły, treści i identyfikatory powiadomień są używane przez system operacyjny do ich wyświetlania i otwierania; nie są wysyłane na nasze serwery. Na Androidzie aplikacja korzysta też z uprawnienia do przywracania zaplanowanych przypomnień po ponownym uruchomieniu urządzenia. Dostęp do powiadomień możesz zmienić w każdej chwili w ustawieniach urządzenia.",
+                lockTitle: "Blokada aplikacji i biometria",
+                lock: "Jeśli włączysz blokadę aplikacji, aplikacja poprosi urządzenie o potwierdzenie Twojej tożsamości za pomocą Face ID, Touch ID, odcisku palca, rozpoznawania twarzy lub kodu urządzenia. Tę weryfikację w całości przeprowadza system operacyjny: aplikacja nigdy nie otrzymuje, nie przechowuje ani nie przesyła Twoich danych biometrycznych.",
+                thirdPartyTitle: "Usługi zewnętrzne i linki",
+                thirdParty1: "Aplikacja nie zawiera zewnętrznej analityki, reklam, pikseli śledzących, plików cookie ani SDK zbierających dane. Korzysta natomiast z bibliotek open source, aby zapewnić swoje funkcje.",
+                thirdParty2: "Jeśli zdecydujesz się otworzyć zewnętrzną stronę internetową lub napisać do nas e-mail, taka interakcja jest obsługiwana przez daną stronę, App Store, Google Play lub dostawcę poczty zgodnie z ich własną polityką prywatności. Aplikacja nie przesyła przy tym Twoich zapisanych danych.",
+                contactTitle: "Kontakt",
+                contact: "Jeśli napiszesz do nas, otrzymujemy informacje, które sam zdecydujesz się przekazać, abyśmy mogli odpowiedzieć na Twoją wiadomość.",
+                email: "E-mail:",
+                support: "Wsparcie Karmic Healing"
+            },
+            pt: {
+                language: "Idioma",
+                title: "Política de Privacidade",
+                lead: "Uma prática tranquila que funciona off-line para equilibrar a energia, guardar pedidos e definir lembretes no iPhone, iPad, Apple Watch e em dispositivos Android.",
+                updated: "Última atualização:",
+                introTitle: "Introdução",
+                intro: "O Karmic Healing está disponível para iPhone, iPad e Apple Watch na App Store, e para celulares e tablets Android no Google Play. Em todas as plataformas, ele foi feito para funcionar off-line. Não operamos servidores que coletem, armazenem ou processem suas informações pessoais.",
+                dataTitle: "Coleta de dados",
+                data1: "O app não exige conta e não nos envia seus lembretes, pedidos, notas ou atividade no app. As informações que você insere ficam no seu dispositivo para o funcionamento do app.",
+                data2: "Não usamos análises, identificadores de publicidade ou serviços de rastreamento de uso.",
+                storageTitle: "Armazenamento local e backups",
+                storage1: "Seus lembretes, pedidos, notas e preferências são armazenados localmente no armazenamento do app, no seu dispositivo. O app não oferece sincronização na nuvem.",
+                storage2: "Dependendo dos ajustes do seu dispositivo, os dados do app podem ser incluídos em um backup do sistema — por exemplo, backups do iCloud ou do Finder em dispositivos Apple, ou o backup do Google no Android. Qualquer serviço de backup ou restauração é regido pelas políticas e ajustes da Apple, do Google ou do serviço que você escolher.",
+                notificationsTitle: "Notificações locais",
+                notifications: "Se você conceder permissão, o Karmic Healing agenda notificações locais para os lembretes. Os títulos, textos e identificadores das notificações são usados pelo sistema operacional para exibir e abrir esses lembretes; eles não são enviados aos nossos servidores. No Android, o app também usa uma permissão para restaurar os lembretes agendados depois que o dispositivo é reiniciado. Você pode alterar o acesso às notificações a qualquer momento nos ajustes do dispositivo.",
+                lockTitle: "Bloqueio do app e biometria",
+                lock: "Se você ativar o bloqueio do app, ele pede ao dispositivo que confirme sua identidade com Face ID, Touch ID, impressão digital, desbloqueio facial ou o código do dispositivo. Essa verificação é feita inteiramente pelo sistema operacional: o app nunca recebe, armazena ou transmite seus dados biométricos.",
+                thirdPartyTitle: "Serviços de terceiros e links",
+                thirdParty1: "O app não contém análises de terceiros, publicidade, pixels de rastreamento, cookies ou SDKs de coleta de dados. Ele utiliza bibliotecas de software de código aberto para oferecer suas funcionalidades.",
+                thirdParty2: "Se você optar por abrir um site externo ou nos escrever por e-mail, essa interação é tratada pelo site, pela App Store, pelo Google Play ou pelo provedor de e-mail correspondente, sob a política de privacidade deles. O app não envia seus dados armazenados junto com essas ações.",
+                contactTitle: "Fale conosco",
+                contact: "Se você entrar em contato conosco, recebemos as informações que decidir incluir, para que possamos responder à sua solicitação.",
+                email: "E-mail:",
+                support: "Suporte do Karmic Healing"
+            },
+            ru: {
+                language: "Язык",
+                title: "Политика конфиденциальности",
+                lead: "Спокойная практика, работающая без интернета: балансировка энергии, просьбы и напоминания на iPhone, iPad, Apple Watch и устройствах Android.",
+                updated: "Последнее обновление:",
+                introTitle: "Введение",
+                intro: "Karmic Healing доступно для iPhone, iPad и Apple Watch в App Store, а также для телефонов и планшетов Android в Google Play. На каждой платформе приложение рассчитано на работу без интернета. Мы не управляем серверами, которые собирают, хранят или обрабатывают вашу личную информацию.",
+                dataTitle: "Сбор данных",
+                data1: "Приложению не требуется учетная запись, и оно не отправляет нам ваши напоминания, просьбы, заметки или данные об использовании. Введенная вами информация хранится на вашем устройстве для работы приложения.",
+                data2: "Мы не используем аналитику, рекламные идентификаторы или сервисы отслеживания использования.",
+                storageTitle: "Локальное хранение и резервные копии",
+                storage1: "Ваши напоминания, просьбы, заметки и настройки хранятся локально в хранилище приложения на вашем устройстве. В приложении нет синхронизации с облаком.",
+                storage2: "В зависимости от настроек устройства данные приложения могут попасть в системную резервную копию — например, в копию iCloud или Finder на устройствах Apple либо в резервную копию Google на Android. Любое резервное копирование или восстановление регулируется политиками и настройками Apple, Google или выбранного вами сервиса.",
+                notificationsTitle: "Локальные уведомления",
+                notifications: "Если вы предоставите разрешение, Karmic Healing планирует локальные уведомления для напоминаний. Заголовки, текст и идентификаторы уведомлений используются операционной системой для их показа и открытия соответствующих напоминаний; они не отправляются на наши серверы. На Android приложение также использует разрешение, чтобы восстанавливать запланированные напоминания после перезагрузки устройства. Доступ к уведомлениям можно в любой момент изменить в настройках устройства.",
+                lockTitle: "Блокировка приложения и биометрия",
+                lock: "Если вы включите блокировку приложения, оно попросит устройство подтвердить вашу личность с помощью Face ID, Touch ID, отпечатка пальца, распознавания лица или код-пароля устройства. Эту проверку полностью выполняет операционная система: приложение никогда не получает, не хранит и не передает ваши биометрические данные.",
+                thirdPartyTitle: "Сторонние сервисы и ссылки",
+                thirdParty1: "Приложение не содержит сторонней аналитики, рекламы, пикселей отслеживания, файлов cookie или SDK для сбора данных. Оно использует библиотеки с открытым исходным кодом для работы функций.",
+                thirdParty2: "Если вы откроете внешний веб-сайт или свяжетесь с нами по электронной почте, соответствующее взаимодействие обрабатывается этим сайтом, App Store, Google Play или почтовым провайдером в соответствии с их собственной политикой конфиденциальности. Приложение не отправляет вместе с этими действиями сохраненные данные приложения.",
+                contactTitle: "Свяжитесь с нами",
+                contact: "Если вы свяжетесь с нами, мы получим информацию, которую вы решите включить, чтобы ответить на ваш запрос.",
+                email: "Электронная почта:",
+                support: "Поддержка Karmic Healing"
+            },
+            tr: {
+                language: "Dil",
+                title: "Gizlilik Politikası",
+                lead: "Enerjiyi dengelemek, dileklerini saklamak ve hatırlatıcı kurmak için çevrimdışı çalışan sakin bir pratik — iPhone, iPad, Apple Watch ve Android cihazlarda.",
+                updated: "Son güncelleme:",
+                introTitle: "Giriş",
+                intro: "Karmic Healing; iPhone, iPad ve Apple Watch için App Store'da, Android telefon ve tabletler için Google Play'de sunulur. Her platformda çevrimdışı kullanılmak üzere tasarlanmıştır. Kişisel bilgilerini toplayan, saklayan veya işleyen sunucular işletmiyoruz.",
+                dataTitle: "Veri toplama",
+                data1: "Uygulama hesap gerektirmez; hatırlatıcılarını, dileklerini, notlarını veya uygulama içindeki etkinliğini bize göndermez. Girdiğin bilgiler, uygulamanın çalışması için cihazında tutulur.",
+                data2: "Analitik araçlar, reklam tanımlayıcıları veya kullanım izleme hizmetleri kullanmıyoruz.",
+                storageTitle: "Yerel saklama ve yedekler",
+                storage1: "Hatırlatıcıların, dileklerin, notların ve tercihlerin cihazındaki uygulama deposunda yerel olarak saklanır. Uygulama bulut eşitlemesi sunmaz.",
+                storage2: "Cihaz ayarlarına bağlı olarak uygulama verileri bir sistem yedeğine dahil edilebilir; örneğin Apple cihazlarda iCloud veya Finder yedekleri, Android'de Google yedeği. Her türlü yedekleme veya geri yükleme hizmeti Apple'ın, Google'ın ya da seçtiğin hizmetin politika ve ayarlarına tabidir.",
+                notificationsTitle: "Yerel bildirimler",
+                notifications: "İzin verirsen Karmic Healing hatırlatıcılar için yerel bildirimler planlar. Bildirim başlıkları, metinleri ve tanımlayıcıları, bu hatırlatıcıları göstermek ve açmak için işletim sistemi tarafından kullanılır; sunucularımıza gönderilmez. Android'de uygulama, cihaz yeniden başlatıldıktan sonra planlanmış hatırlatıcıları geri yüklemek için de bir izin kullanır. Bildirim erişimini istediğin zaman cihaz ayarlarından değiştirebilirsin.",
+                lockTitle: "Uygulama kilidi ve biyometri",
+                lock: "Uygulama kilidini açarsan uygulama, kimliğini Face ID, Touch ID, parmak izi, yüz tanıma ile kilit açma veya cihaz parolasıyla doğrulamasını cihazından ister. Bu doğrulamayı tamamen işletim sistemi yapar: uygulama biyometrik verilerini hiçbir zaman almaz, saklamaz veya iletmez.",
+                thirdPartyTitle: "Üçüncü taraf hizmetleri ve bağlantılar",
+                thirdParty1: "Uygulamada üçüncü taraf analitik araçları, reklam, izleme pikselleri, çerezler veya veri toplayan SDK'lar bulunmaz. Ancak işlevlerini sağlamak için açık kaynaklı yazılım kitaplıkları kullanır.",
+                thirdParty2: "Harici bir web sitesini açmayı ya da bize e-posta yazmayı seçersen, bu etkileşim ilgili web sitesi, App Store, Google Play veya e-posta sağlayıcısı tarafından kendi gizlilik politikaları kapsamında yürütülür. Uygulama bu işlemlerle birlikte kayıtlı verilerini göndermez.",
+                contactTitle: "Bize ulaş",
+                contact: "Bize yazdığında, talebine yanıt verebilmemiz için paylaşmayı seçtiğin bilgileri alırız.",
+                email: "E-posta:",
+                support: "Karmic Healing Destek"
+            },
+            uk: {
+                language: "Мова",
+                title: "Політика конфіденційності",
+                lead: "Спокійна практика, що працює без інтернету: балансування енергії, прохання та нагадування на iPhone, iPad, Apple Watch і пристроях Android.",
+                updated: "Останнє оновлення:",
+                introTitle: "Вступ",
+                intro: "Karmic Healing доступний для iPhone, iPad і Apple Watch в App Store, а також для телефонів і планшетів Android у Google Play. На кожній платформі він розроблений для роботи офлайн. Ми не керуємо серверами, які збирають, зберігають або обробляють вашу особисту інформацію.",
+                dataTitle: "Збір даних",
+                data1: "Застосунок не потребує облікового запису та не надсилає нам ваші нагадування, прохання, нотатки чи дані про використання. Введена вами інформація зберігається на пристрої, щоб застосунок міг працювати.",
+                data2: "Ми не використовуємо аналітику, рекламні ідентифікатори або сервіси відстеження використання.",
+                storageTitle: "Локальне зберігання та резервні копії",
+                storage1: "Ваші нагадування, прохання, нотатки та налаштування зберігаються локально у сховищі застосунку на вашому пристрої. Застосунок не має синхронізації з хмарою.",
+                storage2: "Залежно від налаштувань пристрою дані застосунку можуть потрапити до системної резервної копії — наприклад, до копії iCloud або Finder на пристроях Apple чи до резервної копії Google на Android. Будь-яке резервне копіювання або відновлення регулюється політиками та налаштуваннями Apple, Google або обраного вами сервісу.",
+                notificationsTitle: "Локальні сповіщення",
+                notifications: "Якщо ви надасте дозвіл, Karmic Healing планує локальні сповіщення для нагадувань. Заголовки, текст та ідентифікатори сповіщень використовуються операційною системою для їх показу та відкриття відповідних нагадувань; вони не надсилаються на наші сервери. На Android застосунок також використовує дозвіл, щоб відновлювати заплановані нагадування після перезавантаження пристрою. Доступ до сповіщень можна будь-коли змінити в налаштуваннях пристрою.",
+                lockTitle: "Блокування застосунку та біометрія",
+                lock: "Якщо ви ввімкнете блокування застосунку, він попросить пристрій підтвердити вашу особу за допомогою Face ID, Touch ID, відбитка пальця, розпізнавання обличчя або коду-пароля пристрою. Цю перевірку повністю виконує операційна система: застосунок ніколи не отримує, не зберігає й не передає ваші біометричні дані.",
+                thirdPartyTitle: "Сторонні сервіси та посилання",
+                thirdParty1: "Застосунок не містить сторонньої аналітики, реклами, пікселів відстеження, файлів cookie або SDK для збору даних. Він використовує бібліотеки з відкритим кодом для роботи функцій.",
+                thirdParty2: "Якщо ви відкриєте зовнішній вебсайт або зв’яжетеся з нами електронною поштою, відповідна взаємодія обробляється цим вебсайтом, App Store, Google Play або поштовим провайдером відповідно до їхньої власної політики конфіденційності. Застосунок не надсилає разом із цими діями збережені дані застосунку.",
+                contactTitle: "Зв’яжіться з нами",
+                contact: "Якщо ви зв’яжетеся з нами, ми отримаємо інформацію, яку ви вирішите додати, щоб відповісти на ваш запит.",
+                email: "Електронна пошта:",
+                support: "Підтримка Karmic Healing"
+            },
+            zh: {
+                language: "语言",
+                title: "隐私政策",
+                lead: "一种平静、离线优先的练习：平衡能量、记录祈请、设置提醒，适用于 iPhone、iPad、Apple Watch 和 Android 设备。",
+                updated: "最后更新：",
+                introTitle: "简介",
+                intro: "Karmic Healing 已在 App Store 上架，适用于 iPhone、iPad 和 Apple Watch；也已在 Google Play 上架，适用于 Android 手机和平板电脑。在所有平台上，它都按离线使用设计。我们不运营任何收集、存储或处理你个人信息的服务器。",
+                dataTitle: "数据收集",
+                data1: "本应用无需账户，也不会把你的提醒、祈请、备注或使用行为发送给我们。你输入的信息保存在设备上，仅用于应用运行。",
+                data2: "我们不使用分析工具、广告标识符或使用情况追踪服务。",
+                storageTitle: "本地存储与备份",
+                storage1: "你的提醒、祈请、备注和偏好设置保存在设备上应用的本地存储中。本应用不提供云同步。",
+                storage2: "根据你的设备设置，应用数据可能会包含在系统备份中，例如 Apple 设备上的 iCloud 或 Finder 备份，或 Android 上的 Google 备份。任何备份或恢复服务均受 Apple、Google 或你所选服务的政策与设置约束。",
+                notificationsTitle: "本地通知",
+                notifications: "在你授权后，Karmic Healing 会为提醒安排本地通知。通知的标题、文本和标识符由操作系统用于显示并打开这些提醒，不会发送到我们的服务器。在 Android 上，应用还会使用一项权限，以便在设备重启后恢复已安排的提醒。你可以随时在设备设置中更改通知权限。",
+                lockTitle: "应用锁与生物识别",
+                lock: "如果你开启应用锁，应用会请求设备通过 Face ID、Touch ID、指纹、面部解锁或设备密码来确认你的身份。此验证完全由操作系统完成：应用绝不会接收、存储或传输你的生物识别数据。",
+                thirdPartyTitle: "第三方服务与链接",
+                thirdParty1: "本应用不包含第三方分析工具、广告、追踪像素、Cookie 或数据收集 SDK，但会使用开源软件库来实现应用功能。",
+                thirdParty2: "如果你选择打开外部网站或通过电子邮件联系我们，该交互将由相应网站、App Store、Google Play 或邮件服务商依据其自身隐私政策处理。应用不会随这些操作发送你已保存的应用数据。",
+                contactTitle: "联系我们",
+                contact: "如果你与我们联系，我们会收到你选择提供的信息，以便回复你的请求。",
+                email: "电子邮件：",
+                support: "Karmic Healing 支持"
+            }
+        };
+
+        const elements = document.querySelectorAll("[data-i18n]");
+        const english = {};
+        elements.forEach((element) => {
+            english[element.dataset.i18n] = element.textContent;
+        });
+
+        // "pt-BR", "zh-Hans", "uk_UA" and the like all come down to their base language.
+        function resolveLanguage(value) {
+            const base = (value || "").toLowerCase().split(/[-_]/)[0];
+            return Object.hasOwn(translations, base) ? base : "en";
+        }
+
+        function applyLanguage(language) {
+            const strings = translations[language];
+            elements.forEach((element) => {
+                const key = element.dataset.i18n;
+                element.textContent = strings[key] || english[key];
+            });
+
+            const updated = document.getElementById("updated-date");
+            updated.textContent = new Intl.DateTimeFormat(language, { dateStyle: "long" })
+                .format(new Date(updated.getAttribute("datetime") + "T12:00:00"));
+
+            document.documentElement.lang = language;
+            document.title = (strings.title || english.title) + " · Karmic Healing";
+            document.getElementById("language-select").value = language;
+        }
+
+        const select = document.getElementById("language-select");
+        select.addEventListener("change", () => {
+            const url = new URL(window.location.href);
+            url.searchParams.set("lang", select.value);
+            history.replaceState(null, "", url);
+            applyLanguage(select.value);
+        });
+
+        applyLanguage(resolveLanguage(new URLSearchParams(window.location.search).get("lang")));
+    </script>
 </body>
 </html>
